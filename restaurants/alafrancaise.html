@@ -6,24 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Menu - À la française</title>
         <!--lien css-->
-        <link rel="stylesheet" href="sass/css/style.css">
+        <link rel="stylesheet" href="../sass/css/style.css">
         <!--kit icones-->
         <script src="https://kit.fontawesome.com/78a38017a1.js" crossorigin="anonymous"></script>
     </head>
 
 <body>
 <!--HEADER-->
-    <header>
-        <div>
-        <img src="../images/logo/ohmyfood.png" alt="logo oh my food">
-        </div>
+    <header class="header">
+        <h1 class="header__logo"><a href="../index.html">Ohmyfood</a></h1>
     </header>
 <!--MAIN-->
     <main>
         <img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo restaurant à la française">
         <section>
             <div>
-                <h1>À la française</h1>
+                <h1 class="h1-menu">À la française</h1>
             </div>
             <article>
                 <h2>ENTREES</h2>
@@ -86,14 +84,21 @@
                 </ul>
             </article>
         </section>
+        <section>
+            <button class="btn">Commander</button>
+        </section>
     </main>
 <!--FOOTER-->
-    <footer>
-        <p>Oh my food</p>
-        <a href="#">Proposer un restaurant</a>
-        <a href="#">Devenir partenaire</a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Contact</a> 
+    <footer class="footer">
+        <div class="footer__content">
+            <h4 class="footer__title"><a href="../index.html">Oh my food</a></h4>
+            <ul class="footer__link">
+                <li><a href="#"><i class="fa-sharp fa-solid fa-utensils footer__icon--margin"></i>Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

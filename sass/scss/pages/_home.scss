@@ -1,0 +1,61 @@
+h2 {
+    font-size: $font-S24;
+    font-weight: $font-bold;
+}
+
+.explorer {
+    @include flex ($fdirection: column, $jcontent: center, $alitems: center);
+
+    .searchbar {
+        @include flex ($fdirection: row, $jcontent: center, $alitems: center);
+        background-color: $bg-color-lightgrey2;
+        width: 100%;
+        height: 50px;
+        gap: 17px;
+
+        &__icon {
+            width: 12px;
+            height: 16px;
+        }
+
+        &__location {
+            font-size: $font-S16;
+            font-weight: $font-medium;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 39px;
+    }
+
+    &__headline {
+        font-size: $font-S18;
+        font-weight: $font-light;
+        text-align: center;
+    }
+}
+
+.fonctionnement {
+    width: 100%;
+    height: 440px;
+
+    &__title{
+        margin-top: 48px;
+
+    }
+}
+
+.restaurants {
+    width: 100%;
+    height: 50%;
+    background-color: $bg-color-lightgrey;
+    padding-top: 55px;
+
+    &__cards {
+        @include flex($fdirection: column,$alitems: center, $jcontent: center);
+        width: 90%;
+        height: 70%;
+        gap: 18px;
+    }
+}

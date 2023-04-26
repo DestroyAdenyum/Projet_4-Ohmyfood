@@ -1,18 +1,44 @@
-/**** couleurs principales ****/
+// **** COLORS **** //
+
+// **** couleurs principales **** //
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 
-/**** couleurs fond ****/
+// **** couleurs fond **** //
+$bg-main-color: white;
 $bg-color-lightgrey: #F7F7F7;
-$bg-color-lightgrey2: #EAEAEA; /*** formulaire ***/
-$bg-color-grey: #353535;
+$bg-color-lightgrey2: #EAEAEA; // *** search city *** //
+$bg-color-grey: #353535; // *** footer *** //
 
-/**** couleurs écritures ****/
+// **** couleurs écritures **** //
 $color-white: #FFFFFF;
 $color-black: #000000;
 
-/**** dégradé boutons ****/
-$gradient-button: linear-gradient(to top, $color-secondary, $color-primary);
+// **** dégradés **** //
+$gradient-button: linear-gradient($color-secondary, $color-primary);
+$gradient-heart: linear-gradient($color-primary, $color-secondary);
 
-/**** dégradé coeurs ****/
-$gradient-heart: linear-gradient(to top, $color-primary, $color-secondary);
+// **** box-shadow **** //
+$box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+$box-shadow-light: 0px 4px 15px rgba(0, 0, 0, 0.1);
+$box-shadow-button: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+// ################################## //
+
+$main-font: "Roboto", sans-serif;
+$title-font: "Shrikhand", cursive;
+
+// **** Fonts Size **** //
+$font-S15 : 15px;
+$font-S16: 16px;
+$font-S17: 17px;
+$font-S18: 18px;
+$font-S24: 24px;
+$font-S28: 28px;
+$font-S30: 30px;
+
+// **** Fonts Weight **** //
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;

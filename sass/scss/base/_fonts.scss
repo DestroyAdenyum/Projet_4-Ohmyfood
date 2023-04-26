@@ -1,2 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+html, body {
+    font-family: $main-font;
+}
+
+h1 {
+    font-family: $title-font;
+    font-style: italic;
+    font-size: $font-S30;
+    font-weight: $font-regular;
+    text-align: center;
+}
+
+h4 {
+    font-family: $title-font;
+    font-size: $font-S18;
+    font-weight: $font-regular;
+    color: $color-white;
+}
