@@ -4,17 +4,31 @@
     padding: 22px 25px 22px 25px;
 
     &__content {
-        @include flex($fdirection: column);
+        @include flex($fdirection: column, $jcontent: flex-start);
         gap: 16px;
     }
 
-    &__link {
+    &__title {
+        margin: 0;
+    }
+
+    &__links {
+        @include flex($fdirection: column, $jcontent: flex-start ,$alitems: flex-start);
         color: $color-white;
+        margin: 0;
         gap: 7px;
 
-    }
+        li {
+            margin: 0;
+        }
+        
+        .fa-utensils {
+            margin-right: 12px;
+        }
     
-    &__icon--margin {
-        margin-right: 11px;
+        .fa-handshake-angle {
+            margin-right: 5px;
+        }
     }
+
 }

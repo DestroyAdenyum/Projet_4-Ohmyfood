@@ -1,11 +1,19 @@
 .btn {
     @include flex ($jcontent: center, $alitems: center);
     background: $gradient-button;
+    height: 50px;
     border-radius: 25px;
-    padding: 13px 18px;
     border: none;
     color: $color-white;
     font-size: $font-S16;
     font-weight: $font-medium;
     box-shadow: $box-shadow-button;
+}
+
+.btn-explorer {
+    width: 218px;
+}
+
+.btn-order {
+    width: 186px;
 }

@@ -3,8 +3,10 @@ h2 {
     font-weight: $font-bold;
 }
 
-.explorer {
-    @include flex ($fdirection: column, $jcontent: center, $alitems: center);
+.info {
+    @include flex ($fdirection: column, $alitems: center);
+    background-color: $bg-color-lightgrey;
+    height: 337px;
 
     .searchbar {
         @include flex ($fdirection: row, $jcontent: center, $alitems: center);
@@ -16,33 +18,86 @@ h2 {
         &__icon {
             width: 12px;
             height: 16px;
+            margin: 0;
         }
 
         &__location {
             font-size: $font-S16;
             font-weight: $font-medium;
+            margin: 0;
         }
     }
 
-    &__title {
-        text-align: center;
-        margin-top: 39px;
+    .explorer {
+        @include flex($fdirection: column);
+        gap: 27px;
+
+        &__title {
+            text-align: center;
+            margin-top: 39px;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+    
+        &__headline {
+            font-size: $font-S18;
+            font-weight: $font-light;
+            text-align: center;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
     }
 
-    &__headline {
-        font-size: $font-S18;
-        font-weight: $font-light;
-        text-align: center;
-    }
 }
 
 .fonctionnement {
     width: 100%;
     height: 440px;
+    padding: 44px 20px 68px 20px;
 
-    &__title{
-        margin-top: 48px;
+    &__title {
+        margin-bottom: 26px;
+    }
 
+    &__list {
+        @include flex($fdirection: column, $alitems: center);
+        gap: 24px;
+        margin: 0;
+        padding-left: 20px;
+
+        li {
+            @include flex($fdirection: row, $jcontent: flex-start, $alitems: center);
+            box-shadow: $box-shadow-light;
+            border-radius: 20px;
+            width: 100%;
+            font-size: $font-S16;
+            font-weight: $font-medium;
+            gap: 30px;
+            padding-top: 28px;
+            padding-bottom: 28px;
+            padding-left: 34px;
+
+            span {
+                position: absolute;
+                left: 29px;
+                border-radius: 100%;
+                width: 24px;
+                height: 24px;
+                background-color: $color-primary;
+                color: $color-white;
+                font-weight: $font-medium;
+                font-size: $font-S15;
+                padding: 5px;
+            }
+
+            .fa-solid {
+                margin: 0;
+            }
+
+            .fa-store {
+                color: $color-primary;
+            }
+        }
     }
 }
 
@@ -50,7 +105,11 @@ h2 {
     width: 100%;
     height: 50%;
     background-color: $bg-color-lightgrey;
-    padding-top: 55px;
+    padding: 55px 18px 66px 18px;
+
+    &__title {
+        margin-bottom: 26px;
+    }
 
     &__cards {
         @include flex($fdirection: column,$alitems: center, $jcontent: center);

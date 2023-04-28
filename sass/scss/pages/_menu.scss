@@ -1,0 +1,83 @@
+.goback {
+    position: absolute;
+    top : 2.5%;
+    left: 6%;
+    color: $color-grey;
+    width: 17px;
+    height: 16px;
+}
+
+.banner {
+    max-width: 100%;
+
+    img {
+        width: 100%;
+    }    
+}
+
+.menu {
+    width: 100%;
+    height: 70%;
+    background-color: $bg-color-lightgrey;
+
+    &__restaurant {
+        padding-right: 17px;
+        padding-left: 17px;
+
+        h2 {
+            font-family: $title-font;
+            font-style: italic;
+            font-size: $font-S28;
+            font-weight: $font-regular;
+        }
+    }
+
+    &__section {
+        @include flex($fdirection: column, $alitems: flex-start);
+        padding-left: 13px;
+        padding-right: 13px;
+        padding-bottom: 40px;
+        margin: 0;
+        gap: 12px;
+
+        h3 {
+            font-size: $font-S16;
+            font-weight: $font-light;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        ul {
+            @include flex($fdirection: column, $alitems: flex-start);
+            margin: 0;
+            gap: 12px;
+            width: 100%;
+
+            li {
+                box-shadow: $box-shadow-light;
+                border-radius: 20px;
+                width: 100%;
+                padding: 12px 47px 12px 15px;
+                margin: 0;
+
+                p {
+                    font-size: $font-S15;
+                    font-weight: $font-light;
+                }
+
+                span {
+                    font-size: $font-S15;
+                    font-weight: $font-bold;
+                    color: $color-grey;
+                }
+
+            }
+        }
+        
+
+    }
+
+    &__order {
+        padding-bottom: 40px;
+    }
+}

@@ -6,13 +6,17 @@ html, body {
 
 h1 {
   font-family: "Shrikhand", cursive;
-  font-style: italic;
   font-size: 30px;
   font-weight: 400;
   text-align: center;
 }
 
 h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h5 {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   font-weight: 400;
@@ -20,7 +24,7 @@ h4 {
 }
 
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -45,8 +49,8 @@ li {
   justify-content: center;
   align-items: center;
   background: linear-gradient(#FF79DA, #9356DC);
+  height: 50px;
   border-radius: 25px;
-  padding: 13px 18px;
   border: none;
   color: #FFFFFF;
   font-size: 16px;
@@ -54,16 +58,25 @@ li {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
+.btn-explorer {
+  width: 218px;
+}
+
+.btn-order {
+  width: 186px;
+}
+
 .card {
   width: 100%;
-  height: 20%;
+  height: 251px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.cardimg {
+.card__img {
   width: 100%;
-  height: auto;
+  height: 70%;
+  align-self: stretch;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
@@ -72,7 +85,23 @@ li {
 .card__content {
   width: 100%;
   height: 30%;
-  border-radius: 0 0 15px 15px;
+  padding: 15px;
+}
+
+.card__content__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card__content__indication {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.card__like {
+  position: absolute;
+  left: 80%;
 }
 
 .header {
@@ -100,18 +129,35 @@ li {
 .footer__content {
   display: flex;
   flex-direction: column;
-  justify-content: initial;
+  justify-content: flex-start;
   align-items: initial;
   gap: 16px;
 }
 
-.footer__link {
+.footer__title {
+  margin: 0;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   color: #FFFFFF;
+  margin: 0;
   gap: 7px;
 }
 
-.footer__icon--margin {
-  margin-right: 11px;
+.footer__links li {
+  margin: 0;
+}
+
+.footer__links .fa-utensils {
+  margin-right: 12px;
+}
+
+.footer__links .fa-handshake-angle {
+  margin-right: 5px;
 }
 
 h2 {
@@ -119,14 +165,16 @@ h2 {
   font-weight: 700;
 }
 
-.explorer {
+.info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: initial;
   align-items: center;
+  background-color: #F7F7F7;
+  height: 337px;
 }
 
-.explorer .searchbar {
+.info .searchbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -137,41 +185,107 @@ h2 {
   gap: 17px;
 }
 
-.explorer .searchbar__icon {
+.info .searchbar__icon {
   width: 12px;
   height: 16px;
+  margin: 0;
 }
 
-.explorer .searchbar__location {
+.info .searchbar__location {
   font-size: 16px;
   font-weight: 500;
+  margin: 0;
 }
 
-.explorer__title {
+.info .explorer {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 27px;
+}
+
+.info .explorer__title {
   text-align: center;
   margin-top: 39px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
-.explorer__headline {
+.info .explorer__headline {
   font-size: 18px;
   font-weight: 300;
   text-align: center;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .fonctionnement {
   width: 100%;
   height: 440px;
+  padding: 44px 20px 68px 20px;
 }
 
 .fonctionnement__title {
-  margin-top: 48px;
+  margin-bottom: 26px;
+}
+
+.fonctionnement__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.fonctionnement__list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 30px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 34px;
+}
+
+.fonctionnement__list li span {
+  position: absolute;
+  left: 29px;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.fonctionnement__list li .fa-solid {
+  margin: 0;
+}
+
+.fonctionnement__list li .fa-store {
+  color: #9356DC;
 }
 
 .restaurants {
   width: 100%;
   height: 50%;
   background-color: #F7F7F7;
-  padding-top: 55px;
+  padding: 55px 18px 66px 18px;
+}
+
+.restaurants__title {
+  margin-bottom: 26px;
 }
 
 .restaurants__cards {
@@ -182,6 +296,93 @@ h2 {
   width: 90%;
   height: 70%;
   gap: 18px;
+}
+
+.goback {
+  position: absolute;
+  top: 2.5%;
+  left: 6%;
+  color: #353535;
+  width: 17px;
+  height: 16px;
+}
+
+.banner {
+  max-width: 100%;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.menu {
+  width: 100%;
+  height: 70%;
+  background-color: #F7F7F7;
+}
+
+.menu__restaurant {
+  padding-right: 17px;
+  padding-left: 17px;
+}
+
+.menu__restaurant h2 {
+  font-family: "Shrikhand", cursive;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.menu__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: flex-start;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 40px;
+  margin: 0;
+  gap: 12px;
+}
+
+.menu__section h3 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.menu__section ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: flex-start;
+  margin: 0;
+  gap: 12px;
+  width: 100%;
+}
+
+.menu__section ul li {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  padding: 12px 47px 12px 15px;
+  margin: 0;
+}
+
+.menu__section ul li p {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.menu__section ul li span {
+  font-size: 15px;
+  font-weight: 700;
+  color: #353535;
+}
+
+.menu__order {
+  padding-bottom: 40px;
 } 
 
 /*# sourceMappingURL=style.css.map */
