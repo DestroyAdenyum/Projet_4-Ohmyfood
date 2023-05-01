@@ -14,6 +14,7 @@ h1 {
 h4 {
   font-size: 18px;
   font-weight: 500;
+  padding-bottom: 5px;
 }
 
 h5 {
@@ -67,10 +68,23 @@ li {
 }
 
 .card {
+  position: relative;
   width: 100%;
   height: 251px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.card .new {
+  font-size: 14px;
+  color: #008766;
+  font-weight: 500;
+  background-color: #99E2D0;
+  padding: 8px;
+  border-radius: 2px;
+  position: absolute;
+  top: 5%;
+  left: 75%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 .card__img {
   width: 100%;
@@ -92,11 +106,11 @@ li {
 .card__content__indication {
   font-size: 17px;
   font-weight: 300;
-  margin-top: 5px;
 }
 .card__like {
   position: absolute;
   left: 80%;
+  top: 77%;
 }
 
 .header {
@@ -244,6 +258,8 @@ h2 {
   color: #FFFFFF;
   font-weight: 500;
   font-size: 15px;
+  text-align: center;
+  line-height: 17px;
   padding: 5px;
 }
 .fonctionnement__list li .fa-solid {
@@ -283,25 +299,36 @@ h2 {
 
 .banner {
   max-width: 100%;
+  height: 30%;
 }
 .banner img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu {
   width: 100%;
   height: 70%;
   background-color: #F7F7F7;
+  border-radius: 50px 50px 0 0;
 }
 .menu__restaurant {
   padding-right: 17px;
   padding-left: 17px;
+  margin-bottom: 42px;
 }
 .menu__restaurant h2 {
   font-family: "Shrikhand", cursive;
-  font-style: italic;
   font-size: 28px;
   font-weight: 400;
+}
+.menu__restaurant .heart-like {
+  margin: 0;
+  position: absolute;
+  left: 80%;
+  top: 44%;
 }
 .menu__section {
   display: flex;
@@ -314,11 +341,23 @@ h2 {
   margin: 0;
   gap: 12px;
 }
-.menu__section h3 {
+.menu__section .section-title {
+  margin: 0;
+  width: 100%;
+  height: 25px;
+}
+.menu__section .section-title h3 {
+  width: 100%;
   font-size: 16px;
   font-weight: 300;
   text-transform: uppercase;
   margin: 0;
+  line-height: 19px;
+}
+.menu__section .section-title span {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
 }
 .menu__section ul {
   display: flex;
@@ -330,9 +369,11 @@ h2 {
   width: 100%;
 }
 .menu__section ul li {
+  position: relative;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   width: 100%;
+  height: 69px;
   padding: 12px 47px 12px 15px;
   margin: 0;
 }
@@ -341,6 +382,9 @@ h2 {
   font-weight: 300;
 }
 .menu__section ul li span {
+  position: absolute;
+  left: 88%;
+  bottom: 15%;
   font-size: 15px;
   font-weight: 700;
   color: #353535;

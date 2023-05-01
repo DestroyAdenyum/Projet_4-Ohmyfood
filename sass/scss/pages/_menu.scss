@@ -9,9 +9,12 @@
 
 .banner {
     max-width: 100%;
+    height: 30%;
 
     img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }    
 }
 
@@ -19,16 +22,25 @@
     width: 100%;
     height: 70%;
     background-color: $bg-color-lightgrey;
+    border-radius: 50px 50px 0 0;
+
 
     &__restaurant {
         padding-right: 17px;
         padding-left: 17px;
+        margin-bottom: 42px;
 
         h2 {
             font-family: $title-font;
-            font-style: italic;
             font-size: $font-S28;
             font-weight: $font-regular;
+        }
+
+        .heart-like {
+            margin: 0;
+            position: absolute;
+            left: 80%;
+            top: 44%;
         }
     }
 
@@ -40,11 +52,26 @@
         margin: 0;
         gap: 12px;
 
-        h3 {
-            font-size: $font-S16;
-            font-weight: $font-light;
-            text-transform: uppercase;
+        .section-title {
             margin: 0;
+            width: 100%;
+            height: 25px;
+            
+            h3 {
+                width: 100%;
+                font-size: $font-S16;
+                font-weight: $font-light;
+                text-transform: uppercase;
+                margin: 0;
+                line-height: 19px;
+            }
+
+            span {
+                width: 40px;
+                height: 3px;
+                background-color: $color-tertiary;
+            }
+
         }
 
         ul {
@@ -54,9 +81,11 @@
             width: 100%;
 
             li {
+                position: relative;
                 box-shadow: $box-shadow-light;
                 border-radius: 20px;
                 width: 100%;
+                height: 69px;
                 padding: 12px 47px 12px 15px;
                 margin: 0;
 
@@ -66,6 +95,9 @@
                 }
 
                 span {
+                    position: absolute;
+                    left: 88%;
+                    bottom: 15%;
                     font-size: $font-S15;
                     font-weight: $font-bold;
                     color: $color-grey;
