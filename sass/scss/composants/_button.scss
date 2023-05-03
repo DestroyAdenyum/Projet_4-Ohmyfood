@@ -8,6 +8,10 @@
     font-size: $font-S16;
     font-weight: $font-medium;
     box-shadow: $box-shadow-button;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .btn-explorer {
