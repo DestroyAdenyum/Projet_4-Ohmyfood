@@ -2,10 +2,17 @@
     background-color: $bg-color-grey;
     height: 186px;
     padding: 22px 25px 22px 25px;
+    @include media(desktop) {
+        height: 114px;
+    }
 
     &__content {
         @include flex($fdirection: column, $jcontent: flex-start);
         gap: 16px;
+        @include media(desktop) {
+            @include flex($fdirection: row-reverse, $alitems: flex-end);
+            height: 100%;
+        }
     }
 
     &__title {
@@ -17,6 +24,10 @@
         color: $color-white;
         margin: 0;
         gap: 7px;
+        @include media(desktop) {
+            @include flex($fdirection: row, $jcontent: space-around);
+            width: 661px;
+        }
 
         li {
             margin: 0;

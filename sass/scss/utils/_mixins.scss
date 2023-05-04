@@ -4,3 +4,21 @@
     justify-content: $jcontent;
     align-items: $alitems;
 }
+
+@mixin media($media) {
+    @if $media == tablet {
+        @media (min-width: 768px) and (max-width: 1023px) {
+            @content;
+        }
+    }   @else if $media == desktop {
+            @media (min-width: 1024px) and (max-width: 1239px) {
+                @content;
+        }
+    }   @else if $media == desktop-lg {
+            @media (width: 1440px) {
+                @content;
+            }
+    }   @else {
+            @content;
+    }
+  }

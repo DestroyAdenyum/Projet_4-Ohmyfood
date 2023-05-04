@@ -87,6 +87,11 @@ li {
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .card {
+    width: 40%;
+  }
+}
 .card .new {
   font-size: 14px;
   color: #008766;
@@ -125,6 +130,11 @@ li {
   left: 80%;
   top: 77%;
 }
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .card__like {
+    left: 85%;
+  }
+}
 
 .header {
   display: flex;
@@ -146,12 +156,26 @@ li {
   height: 186px;
   padding: 22px 25px 22px 25px;
 }
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .footer {
+    height: 114px;
+  }
+}
 .footer__content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: initial;
   gap: 16px;
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .footer__content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: initial;
+    align-items: flex-end;
+    height: 100%;
+  }
 }
 .footer__title {
   margin: 0;
@@ -164,6 +188,15 @@ li {
   color: #FFFFFF;
   margin: 0;
   gap: 7px;
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .footer__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: initial;
+    width: 661px;
+  }
 }
 .footer__links li {
   margin: 0;
@@ -231,7 +264,6 @@ h2 {
 
 .fonctionnement {
   width: 100%;
-  height: 440px;
   padding: 44px 20px 68px 20px;
 }
 .fonctionnement__title {
@@ -245,6 +277,11 @@ h2 {
   gap: 24px;
   margin: 0;
   padding-left: 20px;
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .fonctionnement__list {
+    flex-direction: row;
+  }
 }
 .fonctionnement__list li {
   display: flex;
@@ -260,10 +297,11 @@ h2 {
   padding-top: 28px;
   padding-bottom: 28px;
   padding-left: 34px;
+  position: relative;
 }
 .fonctionnement__list li span {
   position: absolute;
-  left: 29px;
+  left: -3%;
   border-radius: 100%;
   width: 24px;
   height: 24px;
@@ -300,6 +338,13 @@ h2 {
   height: 70%;
   gap: 18px;
 }
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .restaurants__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
 
 .goback {
   position: absolute;
@@ -308,6 +353,11 @@ h2 {
   color: #353535;
   width: 17px;
   height: 16px;
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .goback {
+    left: 2%;
+  }
 }
 
 .banner {
@@ -332,6 +382,13 @@ h2 {
   padding-top: 32px;
   margin-bottom: -32px;
 }
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .menu {
+    width: 80%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 .menu__restaurant {
   padding-right: 17px;
   padding-left: 17px;
@@ -342,11 +399,21 @@ h2 {
   font-size: 28px;
   font-weight: 400;
 }
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .menu__restaurant h2 {
+    text-align: center;
+  }
+}
 .menu__restaurant .heart-like {
   margin: 0;
   position: absolute;
   left: 80%;
   top: 3%;
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .menu__restaurant .heart-like {
+    left: 68%;
+  }
 }
 .menu__section {
   display: flex;
@@ -362,7 +429,7 @@ h2 {
 .menu__section .section-title {
   margin: 0;
   width: 100%;
-  height: 25px;
+  height: 27px;
 }
 .menu__section .section-title h3 {
   width: 100%;
@@ -377,11 +444,6 @@ h2 {
   height: 3px;
   background: #99E2D0;
   margin: 0;
-}
-.menu__section .section-title span {
-  width: 40px;
-  height: 3px;
-  background-color: #99E2D0;
 }
 .menu__section ul {
   display: flex;

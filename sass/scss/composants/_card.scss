@@ -4,6 +4,9 @@
     height: 251px;
     border-radius: 15px;
     box-shadow: $box-shadow-light;
+    @include media(desktop) {
+        width: 40%;
+    }
 
     .new {
         font-size: $font-S14;
@@ -47,5 +50,8 @@
         position: absolute;
         left: 80%;
         top: 77%;
+        @include media(desktop) {
+            left: 85%;
+        }
     }
 }
