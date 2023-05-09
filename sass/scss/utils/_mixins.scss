@@ -1,3 +1,4 @@
+// **** FLEX **** //
 @mixin flex($fdirection: initial, $jcontent: initial, $alitems: initial) {
     display: flex;
     flex-direction: $fdirection;
@@ -5,20 +6,21 @@
     align-items: $alitems;
 }
 
-@mixin media($media) {
-    @if $media == tablet {
-        @media (min-width: 768px) and (max-width: 1023px) {
-            @content;
-        }
-    }   @else if $media == desktop {
-            @media (min-width: 1024px) and (max-width: 1239px) {
-                @content;
-        }
-    }   @else if $media == desktop-lg {
-            @media (width: 1440px) {
-                @content;
-            }
-    }   @else {
-            @content;
+// **** MEDIAS **** //
+  @mixin tablet {
+    @media screen and (min-width:$tablet) {
+        @content;
+    }     
+  }
+
+  @mixin desktop {
+    @media screen and (min-width:$desktop) {
+        @content;
+    }
+  }
+
+  @mixin desktop-lg {
+    @media screen and (width:$desktop-lg) {
+        @content;
     }
   }

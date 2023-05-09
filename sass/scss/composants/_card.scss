@@ -4,7 +4,7 @@
     height: 251px;
     border-radius: 15px;
     box-shadow: $box-shadow-light;
-    @include media(desktop) {
+    @include desktop {
         width: 40%;
     }
 
@@ -19,6 +19,12 @@
         top: 5%;
         left: 75%;
         box-shadow: $box-shadow;
+        @include tablet {
+            left: 87%;
+        }
+        @include desktop {
+            left: 80%;
+        }
     }
 
     &__img {
@@ -48,10 +54,16 @@
 
     &__like {
         position: absolute;
-        left: 80%;
+        left: 90%;
         top: 77%;
-        @include media(desktop) {
+        @include tablet {
+            left: 90%;
+        }
+        @include desktop {
             left: 85%;
+        }
+        @include desktop-lg {
+            left: 90%;
         }
     }
 }

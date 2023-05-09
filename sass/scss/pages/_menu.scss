@@ -5,7 +5,7 @@
     color: $color-grey;
     width: 17px;
     height: 16px;
-    @include media(desktop) {
+    @include desktop {
         left: 2%;
     }
 }
@@ -31,22 +31,32 @@
     top: -32px;
     padding-top: 32px;
     margin-bottom: -32px;
-    @include media(desktop) {
-        width: 80%;
+    @include tablet {
+        width: 90%;
         padding-left: 15%;
         padding-right: 15%;
+    }
+    @include desktop {
+        width: 80%;
+    }
+    @include desktop-lg {
+        width: 70%;
+        margin-bottom: -32px;
     }
 
     &__restaurant {
         padding-right: 17px;
         padding-left: 17px;
         margin-bottom: 42px;
+        @include tablet {
+            padding: 0;
+        }
 
         h2 {
             font-family: $title-font;
             font-size: $font-S28;
             font-weight: $font-regular;
-            @include media(desktop) {
+            @include tablet {
                 text-align: center;
             }
         }
@@ -56,8 +66,14 @@
             position: absolute;
             left: 80%;
             top: 3%;
-            @include media(desktop) {
+            @include tablet {
+                left: 71%;
+            }
+            @include desktop {
                 left: 68%;
+            }
+            @include desktop-lg {
+                left: 65%;
             }
         }
     }
@@ -120,6 +136,9 @@
                     font-size: $font-S15;
                     font-weight: $font-bold;
                     color: $color-grey;
+                    @include desktop {
+                        left: 90%;
+                    }
                 }
 
             }

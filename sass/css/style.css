@@ -42,6 +42,7 @@ main {
 
 body, html {
   width: 100%;
+  max-width: 1440px;
   scroll-behavior: smooth;
 }
 
@@ -89,7 +90,7 @@ li {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 1024px) {
   .card {
     width: 40%;
   }
@@ -107,6 +108,16 @@ li {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (min-width: 768px) {
+  .card .new {
+    left: 87%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card .new {
+    left: 80%;
+  }
+}
 .card__img {
   width: 100%;
   height: 174px;
@@ -134,13 +145,23 @@ li {
 
 .card__like {
   position: absolute;
-  left: 80%;
+  left: 90%;
   top: 77%;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 768px) {
+  .card__like {
+    left: 90%;
+  }
+}
+@media screen and (min-width: 1024px) {
   .card__like {
     left: 85%;
+  }
+}
+@media screen and (width: 1440px) {
+  .card__like {
+    left: 90%;
   }
 }
 .header {
@@ -152,6 +173,13 @@ li {
   height: 63px;
 }
 
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 96px;
+    align-items: center;
+    align-self: stretch;
+  }
+}
 .header .header__logo {
   width: 56%;
   height: 70%;
@@ -159,13 +187,20 @@ li {
   margin-bottom: 5px;
 }
 
+@media screen and (min-width: 1024px) {
+  .header .header__logo {
+    height: auto;
+    margin: 0px;
+  }
+}
 .footer {
   background-color: #353535;
   height: 186px;
+  max-width: 100%;
   padding: 22px 25px 22px 25px;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 1024px) {
   .footer {
     height: 114px;
   }
@@ -178,7 +213,7 @@ li {
   gap: 16px;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 1024px) {
   .footer__content {
     display: flex;
     flex-direction: row-reverse;
@@ -201,7 +236,7 @@ li {
   gap: 7px;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 1024px) {
   .footer__links {
     display: flex;
     flex-direction: row;
@@ -301,7 +336,7 @@ h2 {
   padding-left: 20px;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 1024px) {
   .fonctionnement__list {
     flex-direction: row;
   }
@@ -323,6 +358,11 @@ h2 {
   position: relative;
 }
 
+@media screen and (min-width: 768px) {
+  .fonctionnement__list li {
+    width: 80%;
+  }
+}
 .fonctionnement__list li span {
   position: absolute;
   left: -3%;
@@ -338,6 +378,16 @@ h2 {
   padding: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .fonctionnement__list li span {
+    left: -1.5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__list li span {
+    left: -2.5%;
+  }
+}
 .fonctionnement__list li .fa-solid {
   margin: 0;
 }
@@ -367,13 +417,21 @@ h2 {
   gap: 18px;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 1024px) {
   .restaurants__cards {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
   }
 }
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .goback {
   position: absolute;
   top: 35%;
@@ -383,7 +441,7 @@ h2 {
   height: 16px;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 1024px) {
   .goback {
     left: 2%;
   }
@@ -412,11 +470,22 @@ h2 {
   margin-bottom: -32px;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 768px) {
   .menu {
-    width: 80%;
+    width: 90%;
     padding-left: 15%;
     padding-right: 15%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    width: 80%;
+  }
+}
+@media screen and (width: 1440px) {
+  .menu {
+    width: 70%;
+    margin-bottom: -32px;
   }
 }
 .menu__restaurant {
@@ -425,13 +494,18 @@ h2 {
   margin-bottom: 42px;
 }
 
+@media screen and (min-width: 768px) {
+  .menu__restaurant {
+    padding: 0;
+  }
+}
 .menu__restaurant h2 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 400;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 768px) {
   .menu__restaurant h2 {
     text-align: center;
   }
@@ -443,9 +517,19 @@ h2 {
   top: 3%;
 }
 
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media screen and (min-width: 768px) {
+  .menu__restaurant .heart-like {
+    left: 71%;
+  }
+}
+@media screen and (min-width: 1024px) {
   .menu__restaurant .heart-like {
     left: 68%;
+  }
+}
+@media screen and (width: 1440px) {
+  .menu__restaurant .heart-like {
+    left: 65%;
   }
 }
 .menu__section {
@@ -516,6 +600,11 @@ h2 {
   color: #353535;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu__section ul li span {
+    left: 90%;
+  }
+}
 .menu__order {
   padding-bottom: 40px;
 } 
