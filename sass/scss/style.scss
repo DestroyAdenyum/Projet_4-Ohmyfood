@@ -1,14 +1,17 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 
 @import "./base/fonts";
 @import "./base/base";
 
 @import "./composants/button";
 @import "./composants/card";
+@import "./composants/heart";
 
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/loader";
 
 @import "./pages/home";
 @import "./pages/menu";

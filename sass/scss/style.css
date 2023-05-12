@@ -1,5 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@keyframes loader {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes loadtext {
+  100% {
+    margin-top: 200px;
+  }
+}
+@keyframes full {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 html, body {
   font-family: "Roboto", sans-serif;
 }
@@ -42,6 +71,7 @@ main {
 
 body, html {
   width: 100%;
+  min-width: 375px;
   max-width: 1440px;
   scroll-behavior: smooth;
 }
@@ -98,21 +128,18 @@ li {
   color: #008766;
   font-weight: 500;
   background-color: #99E2D0;
+  text-align: center;
   padding: 8px;
   border-radius: 2px;
   position: absolute;
   top: 5%;
-  left: 75%;
+  right: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
-@media screen and (min-width: 768px) {
-  .card .new {
-    left: 87%;
-  }
 }
 @media screen and (min-width: 1024px) {
   .card .new {
-    left: 80%;
+    width: 80px;
+    right: 20px;
   }
 }
 .card__img {
@@ -137,24 +164,63 @@ li {
   font-weight: 300;
 }
 .card__like {
+  cursor: pointer;
+}
+.card__like i {
   position: absolute;
-  left: 90%;
   top: 77%;
+  right: 20px;
 }
 @media screen and (min-width: 768px) {
-  .card__like {
-    left: 90%;
+  .card__like i {
+    right: 30px;
   }
 }
-@media screen and (min-width: 1024px) {
-  .card__like {
-    left: 85%;
-  }
+
+#heart-checkbox1,
+#heart-checkbox2,
+#heart-checkbox3,
+#heart-checkbox4,
+#heart-checkbox5,
+#heart-checkbox6,
+#heart-checkbox7,
+#heart-checkbox8 {
+  display: none;
 }
-@media screen and (width: 1440px) {
-  .card__like {
-    left: 90%;
-  }
+
+#heart-checkbox1:checked + label > i.full-heart,
+#heart-checkbox2:checked + label > i.full-heart,
+#heart-checkbox3:checked + label > i.full-heart,
+#heart-checkbox4:checked + label > i.full-heart,
+#heart-checkbox5:checked + label > i.full-heart,
+#heart-checkbox6:checked + label > i.full-heart,
+#heart-checkbox7:checked + label > i.full-heart,
+#heart-checkbox8:checked + label > i.full-heart {
+  display: inline-block;
+  animation: full 0.5s ease-in-out;
+  opacity: 1;
+}
+
+#heart-checkbox1:checked + label > i.empty-heart,
+#heart-checkbox2:checked + label > i.empty-heart,
+#heart-checkbox3:checked + label > i.empty-heart,
+#heart-checkbox4:checked + label > i.empty-heart,
+#heart-checkbox5:checked + label > i.empty-heart,
+#heart-checkbox6:checked + label > i.empty-heart,
+#heart-checkbox7:checked + label > i.empty-heart,
+#heart-checkbox8:checked + label > i.empty-heart {
+  display: none;
+}
+
+.full-heart {
+  display: none;
+  opacity: 0;
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 .header {
@@ -243,6 +309,63 @@ li {
   margin-right: 5px;
 }
 
+.loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation-name: loader;
+  animation-duration: 3000ms;
+}
+.loader__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  vertical-align: middle;
+  width: 60%;
+  height: 100px;
+}
+.loader__items {
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+  position: relative;
+}
+.loader .i1 {
+  color: #9356DC;
+  position: absolute;
+  animation-name: loading-1;
+  top: 0;
+  left: 0;
+  animation-duration: 500ms;
+  animation-delay: 1000ms;
+}
+.loader .i2 {
+  color: #FF79DA;
+  position: absolute;
+  top: 0;
+  left: 28%;
+  animation-name: loading-2;
+  animation-duration: 500ms;
+  animation-delay: 1500ms;
+}
+.loader .i3 {
+  color: #99E2D0;
+  position: absolute;
+  top: 0;
+  left: 62%;
+  animation-name: loading-3;
+  animation: 500ms;
+  animation-delay: 2000ms;
+}
+
 h2 {
   font-size: 24px;
   font-weight: 700;
@@ -255,6 +378,12 @@ h2 {
   align-items: center;
   background-color: #F7F7F7;
   height: 337px;
+}
+@media screen and (min-width: 768px) {
+  .info {
+    height: auto;
+    padding-bottom: 30px;
+  }
 }
 .info .searchbar {
   display: flex;
@@ -340,8 +469,12 @@ h2 {
   }
 }
 .fonctionnement__list li span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  left: -3%;
+  left: -12px;
   border-radius: 100%;
   width: 24px;
   height: 24px;
@@ -349,19 +482,7 @@ h2 {
   color: #FFFFFF;
   font-weight: 500;
   font-size: 15px;
-  text-align: center;
-  line-height: 17px;
   padding: 5px;
-}
-@media screen and (min-width: 768px) {
-  .fonctionnement__list li span {
-    left: -1.5%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .fonctionnement__list li span {
-    left: -2.5%;
-  }
 }
 .fonctionnement__list li .fa-solid {
   margin: 0;
@@ -394,14 +515,6 @@ h2 {
     flex-wrap: wrap;
     gap: 50px;
   }
-}
-
-.loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .goback {
@@ -480,22 +593,24 @@ h2 {
 }
 .menu__restaurant .heart-like {
   margin: 0;
+}
+.menu__restaurant .heart-like i {
   position: absolute;
   left: 80%;
   top: 3%;
 }
 @media screen and (min-width: 768px) {
-  .menu__restaurant .heart-like {
+  .menu__restaurant .heart-like i {
     left: 71%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu__restaurant .heart-like {
+  .menu__restaurant .heart-like i {
     left: 68%;
   }
 }
 @media screen and (width: 1440px) {
-  .menu__restaurant .heart-like {
+  .menu__restaurant .heart-like i {
     left: 65%;
   }
 }
@@ -563,6 +678,25 @@ h2 {
   .menu__section ul li span {
     left: 90%;
   }
+}
+.menu__section ul li .ellips {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu__section ul li .checkmark {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  color: #FFFFFF;
 }
 .menu__order {
   padding-bottom: 40px;

@@ -13,17 +13,16 @@
         color: $color-green;
         font-weight: $font-medium;
         background-color: $color-tertiary;
+        text-align: center;
         padding: 8px;
         border-radius: 2px;
         position: absolute;
         top: 5%;
-        left: 75%;
+        right: 10px;
         box-shadow: $box-shadow;
-        @include tablet {
-            left: 87%;
-        }
         @include desktop {
-            left: 80%;
+            width: 80px;
+            right: 20px;
         }
     }
 
@@ -53,17 +52,17 @@
     }
 
     &__like {
-        position: absolute;
-        left: 90%;
-        top: 77%;
-        @include tablet {
-            left: 90%;
-        }
-        @include desktop {
-            left: 85%;
-        }
-        @include desktop-lg {
-            left: 90%;
+        cursor: pointer;
+
+        i{
+            position: absolute;
+            top: 77%;
+            right: 20px;
+
+            @include tablet {
+                right: 30px;
+            }
+
         }
     }
 }

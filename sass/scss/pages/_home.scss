@@ -7,6 +7,10 @@ h2 {
     @include flex ($fdirection: column, $alitems: center);
     background-color: $bg-color-lightgrey;
     height: 337px;
+    @include tablet {
+        height: auto;
+        padding-bottom: 30px;
+    }
 
     .searchbar {
         @include flex ($fdirection: row, $jcontent: center, $alitems: center);
@@ -84,8 +88,9 @@ h2 {
             }
 
             span {
+                @include flex($fdirection: row, $jcontent: center, $alitems: center);
                 position: absolute;
-                left: -3%;
+                left: -12px;
                 border-radius: 100%;
                 width: 24px;
                 height: 24px;
@@ -93,15 +98,7 @@ h2 {
                 color: $color-white;
                 font-weight: $font-medium;
                 font-size: $font-S15;
-                text-align: center;
-                line-height: 17px;
                 padding: 5px;
-                @include tablet {
-                    left: -1.5%;
-                }
-                @include desktop {
-                    left: -2.5%;
-                }
             }
 
             .fa-solid {
@@ -136,12 +133,4 @@ h2 {
             gap: 50px;
         }
     }
-}
-
-.loader {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }

@@ -63,18 +63,20 @@
 
         .heart-like {
             margin: 0;
-            position: absolute;
-            left: 80%;
-            top: 3%;
-            @include tablet {
-                left: 71%;
-            }
-            @include desktop {
-                left: 68%;
-            }
-            @include desktop-lg {
-                left: 65%;
-            }
+            i {
+                position: absolute;
+                left: 80%;
+                top: 3%;
+                @include tablet {
+                    left: 71%;
+                }
+                @include desktop {
+                    left: 68%;
+                }
+                @include desktop-lg {
+                    left: 65%;
+                }
+            }   
         }
     }
 
@@ -139,6 +141,24 @@
                     @include desktop {
                         left: 90%;
                     }
+                }
+                
+                .ellips {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                .checkmark {
+                    @include flex($fdirection: row, $jcontent: center, $alitems: center);
+                    width: 60px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-radius: 0 20px 20px 0;
+                    background-color: $color-tertiary;
+                    color: $color-white;
                 }
 
             }

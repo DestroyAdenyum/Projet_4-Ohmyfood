@@ -1,0 +1,46 @@
+#heart-checkbox1,
+#heart-checkbox2,
+#heart-checkbox3,
+#heart-checkbox4,
+#heart-checkbox5,
+#heart-checkbox6,
+#heart-checkbox7,
+#heart-checkbox8 {
+    display: none;
+  }
+
+#heart-checkbox1:checked + label > i.full-heart,
+#heart-checkbox2:checked + label > i.full-heart,
+#heart-checkbox3:checked + label > i.full-heart,
+#heart-checkbox4:checked + label > i.full-heart,
+#heart-checkbox5:checked + label > i.full-heart,
+#heart-checkbox6:checked + label > i.full-heart,
+#heart-checkbox7:checked + label > i.full-heart,
+#heart-checkbox8:checked + label > i.full-heart {
+    display: inline-block;
+    animation: full 0.5s ease-in-out;
+    opacity: 1;
+}
+
+#heart-checkbox1:checked + label > i.empty-heart,
+#heart-checkbox2:checked + label > i.empty-heart,
+#heart-checkbox3:checked + label > i.empty-heart,
+#heart-checkbox4:checked + label > i.empty-heart,
+#heart-checkbox5:checked + label > i.empty-heart,
+#heart-checkbox6:checked + label > i.empty-heart,
+#heart-checkbox7:checked + label > i.empty-heart,
+#heart-checkbox8:checked + label > i.empty-heart {
+    display: none;
+}
+
+
+.full-heart {
+    display: none;
+    opacity: 0;
+    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
