@@ -125,10 +125,20 @@
                 height: 69px;
                 padding: 12px 47px 12px 15px;
                 margin: 0;
+                overflow: hidden;
 
+                h4 {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                
                 p {
                     font-size: $font-S15;
                     font-weight: $font-light;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
 
                 span {
@@ -141,12 +151,10 @@
                     @include desktop {
                         left: 90%;
                     }
-                }
-                
-                .ellips {
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
+
+                    &:hover {                  
+                    transition: all 0.6s;
+                    }
                 }
 
                 .checkmark {
@@ -155,7 +163,7 @@
                     height: 100%;
                     position: absolute;
                     top: 0;
-                    right: 0;
+                    right: -60px;
                     border-radius: 0 20px 20px 0;
                     background-color: $color-tertiary;
                     color: $color-white;

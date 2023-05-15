@@ -20,14 +20,6 @@
     }
 }
 
-@keyframes loadtext {
-    0%{
-    }
-    100%{
-        margin-top: 200px;
-    }
-}
-
 // **** HEART **** //
 @keyframes full {
     from {
@@ -40,3 +32,11 @@
 }
 
 // **** CHECK **** //
+@keyframes all {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-80px);
+    }
+}
