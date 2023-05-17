@@ -74,7 +74,7 @@
                     left: 68%;
                 }
                 @include desktop-lg {
-                    left: 65%;
+                    left: 66%;
                 }
             }   
         }
@@ -116,6 +116,49 @@
             margin: 0;
             gap: 12px;
             width: 100%;
+            
+            .list1 {
+                animation-name: list1;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-fill-mode: forwards;
+                transform: translateX(-100%);
+                transition: all 1s;
+                opacity: 0;
+            }
+
+            .list2 {
+                animation-name: list2;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-fill-mode: forwards;
+                animation-delay: 0.25s;
+                transform: translateX(-100%);
+                transition: all 1s;
+                opacity: 0;
+            }
+
+            .list3 {
+                animation-name: list3;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-fill-mode: forwards;
+                animation-delay: 0.5s;
+                transform: translateX(-100%);
+                transition: all 1s;
+                opacity: 0;
+            }
+
+            .list4 {
+                animation-name: list4;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-fill-mode: forwards;
+                animation-delay: 0.75s;
+                transform: translateX(-100%);
+                transition: all 1s;
+                opacity: 0;
+            }
 
             li {
                 position: relative;
@@ -125,56 +168,82 @@
                 height: 69px;
                 padding: 12px 47px 12px 15px;
                 margin: 0;
-                overflow: hidden;
 
-                h4 {
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                }
                 
-                p {
-                    font-size: $font-S15;
-                    font-weight: $font-light;
+                .dish {
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
+                    margin: 0;
+
+                    h4 {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        padding-bottom: 5px;
+                    }
+                
+                    p {
+                        font-size: $font-S15;
+                        font-weight: $font-light;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
                 }
 
-                span {
+                
+                .price {
                     position: absolute;
-                    left: 88%;
+                    right: 15px;
                     bottom: 15%;
                     font-size: $font-S15;
                     font-weight: $font-bold;
                     color: $color-grey;
+                    transition: all 0.5s;
                     @include desktop {
-                        left: 90%;
-                    }
-
-                    &:hover {                  
-                    transition: all 0.6s;
+                        right: 20px;
                     }
                 }
-
+                
                 .checkmark {
                     @include flex($fdirection: row, $jcontent: center, $alitems: center);
                     width: 60px;
                     height: 100%;
                     position: absolute;
                     top: 0;
-                    right: -60px;
+                    right: 0;
+                    font-size: 0;
                     border-radius: 0 20px 20px 0;
                     background-color: $color-tertiary;
                     color: $color-white;
+                    visibility: hidden;
+                    animation-name: checkrev;
+                    animation-duration: 0.5s;
+                    transition: all 0.5s;
                 }
 
+                &:hover .dish {
+                    width: 70%;
+                    transition: all 0.5s;
+                }
+                
+                &:hover .checkmark {
+                    animation-name: check;
+                    animation-duration: 0.5s;
+                    transition: all 0.5s;
+                    visibility: visible;
+                    font-size: 16px;
+                }
+                
+                &:hover .price {
+                    transform: translateX(-60px);
+                    transition: all 0.6s;
+                }
             }
         }
-        
-
     }
-
+    
     &__order {
         padding-bottom: 40px;
     }

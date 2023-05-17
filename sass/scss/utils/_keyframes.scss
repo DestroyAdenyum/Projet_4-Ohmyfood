@@ -1,22 +1,45 @@
 // **** LOADER **** //
- 
 @keyframes loader {
     0% {
         visibility: visible;
         opacity: 1;
     }
-
-    80% {
-        opacity: 0.5;
-    }
-
-    90% {
-        opacity: 0.25;
-    }
-
     100% {
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+@keyframes load1 {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes load2 {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+@keyframes load3 {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
     }
 }
 
@@ -31,12 +54,66 @@
     }
 }
 
-// **** CHECK **** //
-@keyframes all {
+// **** MENU **** //
+@keyframes list1 {
     from {
-        transform: translateX(0);
+        opacity: 0;
+        transform: translateX(-100%);
     }
     to {
-        transform: translateX(-80px);
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes list2 {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes list3 {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes list4 {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// **** CHECK **** //
+@keyframes check {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60px;
+    }
+}
+
+@keyframes checkrev {
+    from {
+        width: 60px;
+    }
+    to {
+        width: 0;
     }
 }

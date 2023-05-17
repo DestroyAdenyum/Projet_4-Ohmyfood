@@ -20,7 +20,7 @@
   }
 
   @mixin desktop-lg {
-    @media screen and (width:$desktop-lg) {
+    @media screen and (min-width:$desktop-lg) {
         @content;
     }
   }

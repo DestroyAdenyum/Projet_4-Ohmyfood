@@ -4,8 +4,9 @@
     height: 251px;
     border-radius: 15px;
     box-shadow: $box-shadow-light;
+    margin: 0;
     @include desktop {
-        width: 40%;
+        width: 47%;
     }
 
     .new {
