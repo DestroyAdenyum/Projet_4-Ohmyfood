@@ -24,8 +24,3 @@
         @content;
     }
   }
-
-// **** ANIMATIONS **** //
-@mixin loader-transition($duration) {
-  transition: background-color $duration ease-out;
-}
